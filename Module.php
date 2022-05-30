@@ -2,6 +2,7 @@
 
 namespace Modules\TablesCustomCss;
 
+use API;
 use Core\CModule as CModule;
 use CController as CAction;
 
@@ -11,7 +12,8 @@ class Module extends CModule {
 	 * List of .css files to use on specific action/page
 	 */
 	protected $action_css = [
-		"triggers.php"		=> "/public/triggers.php.css",
+		"host/triggers.php"		=> "/public/host.triggers.php.css",
+		"template/triggers.php"		=> "/public/template.triggers.php.css",
 		"templates.php"		=> "/public/templates.php.css",
 		"items.php"	=> "/public/items.php.css",
 		"host_discovery.php"	=> "/public/host_discovery.php.css",
@@ -31,6 +33,14 @@ class Module extends CModule {
 	 */
 	public function onBeforeAction(CAction $action): void {
 		$action_page = $action->getAction();
+
+		if ($action_page === 'triggers.php' && array_key_exists('filter_hostids', $_REQUEST)) {
+			$is_host = API::Host()->get([
+				'output' => null,
+				'hostids' => $_REQUEST['filter_hostids']
+			]);
+			$action_page = $is_host ? 'host/triggers.php' : 'template/triggers.php';
+		}
 
 		if (array_key_exists($action_page, $this->action_css)) {
 			$this->css_file = $this->action_css[$action_page];
