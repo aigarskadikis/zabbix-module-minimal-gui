@@ -1,0 +1,11 @@
+{
+	"manifest_version": 1,
+	"id": "tablecustomcss",
+	"name": "Custom CSS for tables",
+	"author": "",
+	"description": "Customise visibility of columns using .css.",
+	"version": "1.0",
+	"namespace": "TablesCustomCss",
+	"url": ""
+}
+

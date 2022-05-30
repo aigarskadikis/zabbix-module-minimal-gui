@@ -1,0 +1,17 @@
+/* hide column "Key" */
+.list-table tbody tr td:nth-child(5),.list-table thead tr th:nth-child(5){display:none}
+
+/* autoresize "Agent type" */
+.list-table tbody tr td:nth-child(9),.list-table thead tr th:nth-child(9){white-space:nowrap}
+
+/* autoresize "Application" */
+.list-table tbody tr td:nth-child(10),.list-table thead tr th:nth-child(10){white-space:nowrap}
+
+/* autoresize "Status" */
+.list-table tbody tr td:nth-child(11),.list-table thead tr th:nth-child(11){white-space:nowrap}
+
+/* hide template name */
+.list-table tbody tr td:nth-child(3) a.grey:nth-child(1){display:none}
+
+/* hide template in the trigger popup */
+.overlay-dialogue table.list-table tbody tr td:nth-child(2) a.grey:nth-child(1){display:none}

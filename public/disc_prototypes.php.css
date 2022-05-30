@@ -1,0 +1,6 @@
+.list-table tbody tr td:nth-child(4),
+.list-table thead tr th:nth-child(4)
+{display:none}
+
+/* hide template name */
+tbody tr td:nth-child(3) a.grey:nth-child(1){display:none}

@@ -1,0 +1,12 @@
+/* hide "Operational data" */
+.list-table thead th:nth-child(5),.list-table tbody td:nth-child(5){display:none}
+
+/* hide "Exression" */
+.list-table thead th:nth-child(6),.list-table tbody td:nth-child(6){display:none}
+
+/* hide "Tags" */
+.list-table thead th:nth-child(9),.list-table tbody td:nth-child(9){display:none}
+
+/* hide template name in host level */ 
+.list-table tbody td:nth-child(4) a.grey:nth-child(1){display:none}
+

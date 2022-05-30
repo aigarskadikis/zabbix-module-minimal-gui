@@ -1,0 +1,5 @@
+div.wrapper main form table tbody tr td:nth-child(11),
+div.wrapper main form table tbody tr td:nth-child(9),
+div.wrapper main form table thead tr th:nth-child(11),
+div.wrapper main form table thead tr th:nth-child(9)
+{display:none}
