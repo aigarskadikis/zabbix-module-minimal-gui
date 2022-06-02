@@ -18,7 +18,6 @@ class Module extends CModule {
 		"template/host_discovery.php"		=> "/public/template.host_discovery.php.css",
 		"templates.php"		=> "/public/templates.php.css",
 		"items.php"	=> "/public/items.php.css",
-		"host_discovery.php"	=> "/public/host_discovery.php.css",
 		"disc_prototypes.php"	=> "/public/disc_prototypes.php.css",
 		"graphs.php"	=> "/public/graphs.php.css",
 		"applications.php"	=> "/public/applications.php.css",
