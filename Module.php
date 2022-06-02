@@ -22,6 +22,7 @@ class Module extends CModule {
 		"graphs.php"	=> "/public/graphs.php.css",
 		"applications.php"	=> "/public/applications.php.css",
 		"trigger_prototypes.php"	=> "/public/trigger_prototypes.php.css",
+		"host.view"	=> "/public/host.view.css",
 		"hosts.php"			=> "/public/hosts.php.css"
 	];
 
