@@ -1,5 +1,8 @@
-div.wrapper main form table tbody tr td:nth-child(11),
-div.wrapper main form table tbody tr td:nth-child(12),
-div.wrapper main form table thead tr th:nth-child(11),
-div.wrapper main form table thead tr th:nth-child(12)
-{display:none}
+/* hide Linked templates */
+div.wrapper main form table thead tr th:nth-child(11),div.wrapper main form table tbody tr td:nth-child(11){display:none}
+
+/* hide Linked to templates */
+div.wrapper main form table thead tr th:nth-child(12),div.wrapper main form table tbody tr td:nth-child(12){display:none}
+
+/* hide Tags */
+div.wrapper main form table thead tr th:nth-child(13),div.wrapper main form table tbody tr td:nth-child(13){display:none}

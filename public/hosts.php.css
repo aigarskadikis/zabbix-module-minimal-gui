@@ -1,5 +1,12 @@
-div.wrapper main form table tbody tr td:nth-child(11),
-div.wrapper main form table tbody tr td:nth-child(9),
-div.wrapper main form table thead tr th:nth-child(11),
-div.wrapper main form table thead tr th:nth-child(9)
-{display:none}
+/* hide IP address */
+div.wrapper main form table thead tr th:nth-child(9),div.wrapper main form table tbody tr td:nth-child(9){display:none}
+
+/* hide list of templates */
+div.wrapper main form table thead tr th:nth-child(11),div.wrapper main form table tbody tr td:nth-child(11){display:none}
+
+/* hide Agent encryption */
+div.wrapper main form table thead tr th:nth-child(14),div.wrapper main form table tbody tr td:nth-child(14){display:none}
+
+/* hide Tags */
+div.wrapper main form table thead tr th:nth-child(16),div.wrapper main form table tbody tr td:nth-child(16){display:none}
+

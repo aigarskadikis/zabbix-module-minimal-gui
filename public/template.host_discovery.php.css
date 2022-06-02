@@ -4,5 +4,8 @@
 /* hide LLD key */
 .list-table thead tr th:nth-child(8),.list-table tbody tr td:nth-child(8){display:none}
 
+/* hide Info */
+.list-table thead tr th:nth-child(12),.list-table tbody tr td:nth-child(12){display:none}
+
 /* hide parent template name */
 .list-table tbody tr td:nth-child(3) a.grey:nth-child(1){display:none}
