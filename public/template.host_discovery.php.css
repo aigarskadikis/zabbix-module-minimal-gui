@@ -1,0 +1,8 @@
+/* hide the template name */
+.list-table thead tr th:nth-child(2),.list-table tbody tr td:nth-child(2){display:none}
+
+/* hide LLD key */
+.list-table thead tr th:nth-child(8),.list-table tbody tr td:nth-child(8){display:none}
+
+/* hide parent template name */
+.list-table tbody tr td:nth-child(3) a.grey:nth-child(1){display:none}

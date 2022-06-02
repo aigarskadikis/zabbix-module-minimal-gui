@@ -14,6 +14,8 @@ class Module extends CModule {
 	protected $action_css = [
 		"host/triggers.php"		=> "/public/host.triggers.php.css",
 		"template/triggers.php"		=> "/public/template.triggers.php.css",
+		"host/host_discovery.php"		=> "/public/host.host_discovery.php.css",
+		"template/host_discovery.php"		=> "/public/template.host_discovery.php.css",
 		"templates.php"		=> "/public/templates.php.css",
 		"items.php"	=> "/public/items.php.css",
 		"host_discovery.php"	=> "/public/host_discovery.php.css",
@@ -34,6 +36,8 @@ class Module extends CModule {
 	public function onBeforeAction(CAction $action): void {
 		$action_page = $action->getAction();
 
+
+// exception for trigger page
 		if ($action_page === 'triggers.php' && array_key_exists('filter_hostids', $_REQUEST)) {
 			$is_host = API::Host()->get([
 				'output' => null,
@@ -41,6 +45,18 @@ class Module extends CModule {
 			]);
 			$action_page = $is_host ? 'host/triggers.php' : 'template/triggers.php';
 		}
+
+		// exception for LLD rule list
+if ($action_page === 'host_discovery.php' && array_key_exists('filter_hostids', $_REQUEST)) {
+                        $is_host = API::Host()->get([
+                                'output' => null,
+                                'hostids' => $_REQUEST['filter_hostids']
+                        ]);
+                        $action_page = $is_host ? 'host/host_discovery.php' : 'template/host_discovery.php';
+                }
+
+
+
 
 		if (array_key_exists($action_page, $this->action_css)) {
 			$this->css_file = $this->action_css[$action_page];
